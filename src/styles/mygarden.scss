@@ -1,0 +1,17 @@
+.plot{
+  margin:5px;
+  width:60px !important;
+  height:60px;
+  background: saddlebrown;
+}
+.plots {
+  overflow-x: auto;
+}
+.row{
+  display: -webkit-box;
+}
+.plotTitle{
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
+}

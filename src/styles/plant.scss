@@ -1,0 +1,23 @@
+.plantcard {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 100%;
+    font-size:1.2em;
+    
+    li{
+
+    }
+}
+
+.pantcard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+#plantMenu{
+  display:flex;
+
+  button{
+    flex:1;
+  }
+}
+.plantcard{
+
+}
