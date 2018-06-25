@@ -10,23 +10,24 @@ export default class MyGarden extends Component {
 		plants.forEach((plant)=>{
 			grid[plant.row][plant.col]=plant.name;
 		})
+		//TODO create grid in the store
 		return grid;
 	}
 
-	renderGarden(height,width,plants){
+	renderGarden(gridNum, height,width,plants){
 		let grid =this.createGrid(height, width, plants);
 		return(
-			<Plot grid={grid}></Plot>
+			<Plot gridNum={gridNum} grid={grid}></Plot>
 		)
 	}
 
 	loadPlots(){
 		const plots = this.props.user.plots;
-		let garden=	plots.map((plot)=>{
+		let garden=	plots.map((plot, i)=>{
 			return(
 			<div key={plot.name} className={plot.name}>
 				<div className="plotTitle">{plot.name}</div>
-				{this.renderGarden(plot.plotHeight, plot.plotWidth, plot.plants)}
+				{this.renderGarden(i, plot.plotHeight, plot.plotWidth, plot.plants)}
 			</div>
 			)
 		})
