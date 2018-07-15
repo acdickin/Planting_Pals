@@ -10,14 +10,12 @@ export default class Plants extends Component {
 		this.handleClick =this.handleClick.bind(this)
 	}
 	handleClick(e){
-		console.log( e.target.id)
 		this.setState({
 			selected: e.target.id
 		})
 	}
 	handleSelect(e){
 		e.preventDefault();
-		console.log(e.target.id)
 		window.location.hash = window.location.hash +"/"+e.target.id
 	}
 	createDisplay(planttype){
